@@ -1,24 +1,30 @@
 import { createBrowserRouter } from 'react-router';
-import { Homepage } from './pages/Homepage';
-import { InfluencerListing } from './pages/InfluencerListing';
-import { InfluencerProfile } from './pages/InfluencerProfile';
-import { Login } from './pages/Login';
-import { BrandSignup } from './pages/BrandSignup';
-import { InfluencerSignup } from './pages/InfluencerSignup';
-import { BrandDashboard } from './pages/BrandDashboard';
-import { InfluencerDashboard } from './pages/InfluencerDashboard';
-import { Checkout } from './pages/Checkout';
-import { Pricing } from './pages/Pricing';
-import { AdminPanel } from './pages/AdminPanel';
-import Registration from './pages/Registration';
-import { HowItWorks } from './pages/HowItWorks';
-import SignupInfluencer from './pages/SignupInfluencer';
-import InfluencerLogin from './pages/InfluencerLogin';
-import InfluencerDashboardNew from './pages/InfluencerDashboard';
-import { BrandLogin } from './pages/BrandLogin';
-import { BrandPublicProfile } from './pages/BrandPublicProfile';
-import { ForgotPassword } from './pages/ForgotPassword';
-import { ResetPassword } from './pages/ResetPassword';
+import {
+  Homepage,
+  HowItWorks,
+  Pricing,
+  Checkout,
+} from '../pages/common';
+import {
+  Login,
+  ForgotPassword,
+  ResetPassword,
+  Registration,
+} from '../pages/auth';
+import {
+  BrandSignup,
+  BrandLogin,
+  BrandDashboard,
+  BrandPublicProfile,
+} from '../pages/brand';
+import {
+  InfluencerListing,
+  InfluencerProfile,
+  SignupInfluencer,
+  InfluencerLogin,
+  InfluencerDashboardNew,
+} from '../pages/influencer';
+import { AdminPanel } from '../pages/admin';
 import RootLayout from './RootLayout';
 
 export const router = createBrowserRouter([
