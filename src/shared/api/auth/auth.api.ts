@@ -1,12 +1,19 @@
-import { apiClient } from '@/shared/api/client';
+import { apiClient } from '@/shared/api';
 
 export interface LoginRequest {
   email: string;
   password: string;
 }
 
-export type LoginResponse = unknown;
-
-export function loginUser(payload: LoginRequest) {
-  return apiClient.post<LoginResponse>('/api/users/login', payload);
+export interface LoginResponse {
+  token: string;
+  user: {
+    id: string;
+    email: string;
+  };
 }
+
+export const authApi = {
+  login: (payload: LoginRequest) =>
+    apiClient.post<LoginResponse>('/api/users/login', payload),
+};

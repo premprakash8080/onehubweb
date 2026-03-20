@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router';
 import { Building2, Mail, Lock, Eye, EyeOff, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { useLogin } from '@/pages/auth/hooks/useLogin';
+import { useLogin } from './hooks/useLogin';
 
 export function BrandLogin() {
   const [email, setEmail] = useState('');
